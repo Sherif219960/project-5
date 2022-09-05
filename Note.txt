@@ -1,0 +1,71 @@
+// to make slider we use (Owi carosel) or using (venoBox) in jquery
+
+// to make item in center we use 
+
+.display-table {
+  position: absolute;
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+// to make header height and window auto resize in in js we use code
+
+ // header height
+    $(function () {
+        $('.header').height($(window).height());
+    });
+    $(window).resize(function () {
+        $('.header').height($(window).height());
+
+    });
+
+
+// to make box Shadow 
+  box-shadow: 0 10px 35px rgba(12, 24, 36, .3);
+
+// to make smooth scroll we use 
+
+$('nav li a').on('click',function(){
+	$('html,body').animate({
+		scrollTop:$('#'+(this).data('scroll')).offset().top - height of navbar
+	},1000)
+})
+
+// to make up button 
+
+    // button up
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 1000) {
+            $('.up').fadeIn(1000);
+        } else {
+            $('.up').fadeOut(1000);
+
+        }
+    });
+    $('.up').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 1000);
+    });
+
+
+// to make animate whene loading page we use spinner css liberary and in js code we use 
+
+// loading page 
+    $(window).on('load', function () {
+        $('.loading').fadeOut(3000, function () {
+            $('body').css({ 'overflow': 'auto' });
+        });
+    });
+
+
+// to make animate on scroll libraby we use (AOS) / outro library in jqyery
